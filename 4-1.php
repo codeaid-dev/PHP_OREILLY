@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <th>街</th>
+    <th>市</th>
     <th>人口</th>
   </tr>
 <?php
