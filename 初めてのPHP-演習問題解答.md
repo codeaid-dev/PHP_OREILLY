@@ -1903,8 +1903,7 @@ setcookie('last_access', $now);
 if (isset($_COOKIE['last_access'])) {
   // 1970年以来の秒数値から
   DateTimeを作成するには、
-  //先頭に
-  @を付ける
+  //先頭に@を付ける
   $d = new DateTime('@'. $_COOKIE['last_access']);
   $msg = '<p>You last visited this page at ' .
         $d->format('g:i a') . ' on ' .
@@ -1954,13 +1953,13 @@ if ($response ==== false) {
 
 ### 演習問題 1
 
-5 行目にキーワード  
+5行目にキーワード  
 global があることが原因で、予期せぬキーワードが報告される。実際には次のパースエラーが出力される。  
-PHP Parse error: syntax error, unexpected 'global' (T_GLOBAL)  
-in debugging-12.php on line 5  
-このプログラムを適切に実行するには、print global $name;の行をprint $GLOBALS['name'];  
-に変更する。または、global name;を関数の最初の行として追加し、print global $name;を  
-print $name;に変更することもできる。
+```
+PHP Parse error: syntax error, unexpected 'global' (T_GLOBAL)
+in debugging-12.php on line 5
+```
+このプログラムを適切に実行するには、print global $name;の行をprint $GLOBALS['name'];に変更する。または、global name;を関数の最初の行として追加し、print global $name;をprint $name;に変更することもできる。
 
 ### 演習問題 2
 
