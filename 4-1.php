@@ -1,8 +1,8 @@
-<table>
+<!--<table>
   <tr>
     <th>市</th>
     <th>人口</th>
-  </tr>
+  </tr>-->
 <?php
 $census = ['New York, NY' => 8175133,
         'Los Angeles, CA' => 3792621,
@@ -16,9 +16,14 @@ $census = ['New York, NY' => 8175133,
         'San Jose, CA' => 945942];
 $total = 0;
 
+printf("%-17s\t%s\n", "市", "人口");
+
 foreach ($census as $city => $population) {
   $total += $population;
-  print "<tr><td>$city</td><td>$population</td></tr>\n";
+  //print "<tr><td>$city</td><td>$population</td></tr>\n";
+  printf("%-17s\t%s\n", $city, $population);
 }
 
-print "<tr><td>合計</td><td>$total</td></tr>\n"; print "</table>";
+//print "<tr><td>合計</td><td>$total</td></tr>\n"; print "</table>";
+printf("合計\t\t\t%s\n", $total);
+//print "</table>";
