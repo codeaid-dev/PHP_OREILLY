@@ -329,8 +329,7 @@ function html_img2($file, $alt = null, $height = null, $width = null) {
 ### 演習問題 3
 
 ```
-//前の演習の
-html_img2()関数はこのファイルに保存されている
+//前の演習のhtml_img2()関数はこのファイルに保存されている
 include "html-img2.php";
 $image_path = '/images/';
 print html_img2('puppy.png');
