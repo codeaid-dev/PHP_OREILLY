@@ -1330,7 +1330,7 @@ while ((! feof($fh)) && ($line = fgets($fh))) {
   $addresses[$line] = $addresses[$line] + 1;
 }
 if (! fclose($fh)) {
-die("Can't close addresses.txt: $php_errormsg");
+  die("Can't close addresses.txt: $php_errormsg");
 }
 
 // $addressesを要素値で逆順（最大値が最初）にソートする
@@ -1342,7 +1342,7 @@ if(! $fh){
 }
 foreach ($addresses as $address => $count) {
   //末尾に改行を忘れない
-  if (fwrite($fh, "$count,$address\n") ==== false) {
+  if (fwrite($fh, "$count,$address\n") === false) {
     die("Can't write $count,$address: $php_errormsg");
   }
 }
