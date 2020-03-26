@@ -1,4 +1,6 @@
 <?php
+// 関数　解答
+// ********** Q1 **********
 $a = 0;
 function checkScope($a) {
   $a += 100;
@@ -10,6 +12,7 @@ print(checkScope($a) . " ");
 print($a . "\n");
 
 
+// ********** Q2 **********
 function getTrue() {
   print("getTrue関数を実行\n");
   return true;
@@ -26,6 +29,7 @@ if (getTrue() || getFalse()) {
 }
 
 
+// ********** Q3 **********
 function getMax($nums) {
   $max = 0;
   for ($i = 0; $i < count($nums); $i++) {
@@ -42,6 +46,7 @@ $ans = getMax($q);
 print($ans . "\n");
 
 
+// ********** Q4 **********
 $a = 0;
 function checkScope2($a) {
   $GLOBALS['a'] += 100;
