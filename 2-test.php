@@ -36,4 +36,4 @@ $rate = 0.1;
 $tax = $price * $rate;
 $tax_price = $price + $tax;
 printf("%s\t\t%s\t\t%s", "ゲーム", "発売日", "価格\n");
-printf("%s\t%d/%02d/%02d\t\\%d(税込\\%d)\n", $game, $year, $month, $day, $price, $tax_price);
+printf("%s\t%d/%02d/%02d\t%d円(税込%d円)\n", $game, $year, $month, $day, $price, $tax_price);
