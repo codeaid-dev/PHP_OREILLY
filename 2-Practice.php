@@ -47,7 +47,12 @@ $num = "4982-2975-6028";
 print 'カード番号：***' . substr($num, -4, 4);
 // カード番号：***6028
 
-// ********** Q8 **********
+// ********** Q10 **********
+$radius = 23;
+$pi = 3.14;
+printf('半径%dcmの円の円周は、%.2fcmです。', $radius, $radius * 2 * $pi);
+
+// ********** Q11 **********
 $n = 1;
 $p = 2;
 print "$n, $p\n";
@@ -73,24 +78,34 @@ $n++;
 $p *= 2;
 print "$n, $p\n";
 
-// ********** Q9 **********
+// ********** Q12 **********
+$str = "目の前に突然{monster}が現れた。\nびっくりして{monster}は逃げていった。";
+$monster = "スライム";
+print str_replace('{monster}', $monster, $str);
+
+// ********** Q13 **********
+$food = "カレー";
+print "今日の{$food}は最高に美味かった！";
+
+// ********** Q14 **********
 print "半角英数字：";
 $str = trim(fgets(STDIN));
 print "結果表示：" . str_replace(" ", "", $str);
-// ********** Q9 **********
+
+// ********** Q15 **********
 $num = 9;
 printf("%04d\n",$num);
 printf("%03d%d\n",$num,$num);
 printf("%02d%d%d\n",$num,$num,$num);
 printf("%d%d%d%d\n",$num,$num,$num,$num);
 
-// ********** Q10 **********
+// ********** Q16 **********
 print "半角英字入力：";
 $str = trim(fgets(STDIN));
 $str = ucwords(strtolower($str));
 print "大文字表示：" . $str;
 
-// ********** Q11 **********
+// ********** Q17 **********
 print "体重は？";
 $weight = trim(fgets(STDIN));
 print "身長は？";
@@ -102,7 +117,7 @@ printf("身長が%dcmの適正体重は%.2fkgです。\n", $tall, $jst);
 // 体重は60で身長が170cmのBMIは20.76です。
 // 身長が170cmの適正体重は63.58kgです。
 
-// ********** Q12 **********
+// ********** Q18 **********
 print "ゲーム名は？";
 $game = trim(fgets(STDIN));
 print "発売日は？";
