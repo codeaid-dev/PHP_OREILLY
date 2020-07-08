@@ -112,7 +112,7 @@ print "身長は？";
 $tall = trim(fgets(STDIN));
 $bmi = $weight / (($tall/100) ** 2);
 $jst = (($tall/100) ** 2) * 22;
-printf("体重は%dで身長が%dcmのBMIは%.2fです。\n", $weight, $tall, $bmi);
+printf("体重は%dkgで身長が%dcmのBMIは%.2fです。\n", $weight, $tall, $bmi);
 printf("身長が%dcmの適正体重は%.2fkgです。\n", $tall, $jst);
 // 体重は60で身長が170cmのBMIは20.76です。
 // 身長が170cmの適正体重は63.58kgです。
