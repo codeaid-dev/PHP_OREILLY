@@ -41,8 +41,8 @@ foreach ($teams as $key => $value) {
 
 
 // ********** Q4 **********
-$drinks = ["コーヒー" => 230, "紅茶" => 200, "ケーキ" => 300, "アップルパイ" => 350];
-print("ご注文は？　");
+$drinks = ["Coffee" => 230, "Tea" => 200, "Cake" => 300, "Pie" => 350];
+print("ご注文は？");
 $ans = trim(fgets(STDIN));
 if (isset($drinks[$ans])) {
   print($ans . "は" . $drinks[$ans] . "円です\n");

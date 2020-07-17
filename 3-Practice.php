@@ -114,9 +114,9 @@ if ($age < 20) {
     print "未成年（義務教育の対象）\n";
   }
 } else {
-  if ($age >= 60 && $age < 70) {
-    print "高齢者\n";
-  } else if ($age >= 70) {
+  if ($age >= 65 && $age < 75) {
+    print "前期高齢者\n";
+  } else if ($age >= 75) {
     print "後期高齢者\n";
   } else {
     print "成人\n";
@@ -124,13 +124,15 @@ if ($age < 20) {
 }
 
 // ********** Q14 **********
-$num = rand(1, 6);
-if ($num == 3) {
-  print "今日は最高です！\n";
-} else if ($num % 2 == 0) {
-  print "今日は普通の日です\n";
-} else {
-  print "今日は良くない日です\n";
+print "1円玉の枚数：";
+$yen1 = trim(fgets(STDIN));
+print "5円玉の枚数：";
+$yen5 = trim(fgets(STDIN));
+$total = $yen5 * 5 + $yen1;
+for ($i = 1; $i <= $total; $i++) {
+  if ($i % 5 <= $yen1) {
+    print $i."\n";
+  }
 }
 
 // ********** Q15 **********
@@ -147,7 +149,7 @@ $hazure = 0;
 for ($i = 0; $i < 3; $i++) {
   print "数値を入力：";
   $ans = trim(fgets(STDIN));
-  $cmp = rand(1, 6);
+  $cmp = rand(1, 10);
   if ($ans == $cmp) {
     $atari++;
     print "あたり！\n";
