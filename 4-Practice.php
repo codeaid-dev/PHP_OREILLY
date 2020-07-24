@@ -1,6 +1,6 @@
 <?php
 // 配列の操作　解答例
-// ********** Q1 **********
+// ********** Q11 **********
 $teams = ["team-A", "team-B", "team-C", "team-D", "team-E"];
 for ($i = 0; $i < count($teams); $i++) {
   for ($j = $i+1; $j < count($teams); $j++) {
@@ -8,21 +8,21 @@ for ($i = 0; $i < count($teams); $i++) {
   }
 }
 
-// ********** Q2 **********
+// ********** Q12 **********
 $seasons = ["Spring" => "桜", "Summer" => "向日葵", "Autumn" => "秋桜", "Winter" => "梅"];
 
 foreach ($seasons as $key => $value) {
   print($key .  "は" . $value . "\n");
 }
 
-// ********** Q3 **********
+// ********** Q13 **********
 $tanaka = array("name"=>"田中", "class"=>"Aクラス", "mail"=>"tanaka@hoge.com");
 $suzuki = array("name"=>"鈴木", "class"=>"Wクラス", "mail"=>"suzuki@hoge.com");
 $sato = array("name"=>"佐藤", "class"=>"Aクラス", "mail"=>"sato@hoge.com");
 $meibo = array("2020001"=>$tanaka, "2020002"=>$suzuki, "2020003"=>$sato);
 var_dump($meibo);
 
-// ********** Q4 **********
+// ********** Q14 **********
 $teams = ["team-A" => ["home" => "大阪", "number" => 20],
          "team-B" => ["home" => "東京", "number" => 30],
          "team-C" => ["home" => "名古屋", "number" => 15],
@@ -34,7 +34,7 @@ foreach ($teams as $key => $value) {
 }
 
 
-// ********** Q5 **********
+// ********** Q15 **********
 $drinks = ["Coffee" => 230, "Tea" => 200, "Cake" => 300, "Pie" => 350];
 print("ご注文は？");
 $ans = trim(fgets(STDIN));
@@ -44,7 +44,7 @@ if (isset($drinks[$ans])) {
   print("メニューにはありません\n");
 }
 
-// ********** Q6 **********
+// ********** Q16 **********
 print "入力：";
 $str = trim(fgets(STDIN));
 $result = [];
@@ -62,7 +62,7 @@ while (strlen($str) > 0) {
 }
 var_dump($result);
 
-// ********** Q7 **********
+// ********** Q17 **********
 $total = 0;
 for ($i = 0; $i < 5; $i++) {
   $nums[] = rand(1,10);
@@ -84,7 +84,7 @@ for ($i = 0; $i < count($nums); $i++) {
 print $big . "\n";
 print $small . "\n";
 
-// ********** Q8 **********
+// ********** Q18 **********
 print "入力：";
 $nums = explode(",", trim(fgets(STDIN)));
 for ($i = 0; $i < count($nums); $i++) {
@@ -99,7 +99,7 @@ for ($i = 0; $i < count($nums); $i++) {
   print "\n";
 }
 
-// ********** Q9 **********
+// ********** Q19 **********
 $months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 $days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 $count = 0;
