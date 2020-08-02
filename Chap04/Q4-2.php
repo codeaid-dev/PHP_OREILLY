@@ -13,6 +13,27 @@ $census = ['New York, NY' => 8175133,
 // 値で連想配列をソートする
 asort($census);
 
+printf("%-17s\t%s\n", "市", "人口");
+$total = 0;
+foreach ($census as $city => $population) {
+  $total += $population;
+  printf("%-17s\t%s\n", $city, $population);
+}
+printf("合計\t\t\t%s\n", $total);
+
+// キーで連想配列をソートする
+ksort($census);
+
+printf("%-17s\t%s\n", "市", "人口");
+$total = 0;
+foreach ($census as $city => $population) {
+  $total += $population;
+  printf("%-17s\t%s\n", $city, $population);
+}
+printf("合計\t\t\t%s\n", $total);
+
+/*
+// HTML
 print "<table>\n";
 print "<tr><th>City</th><th>Population</th></tr>\n";
 $total = 0;
@@ -35,3 +56,4 @@ foreach ($census as $city => $population) {
 }
 print "<tr><td>Total</td><td>$total</td></tr>\n";
 print "</table>";
+*/

@@ -20,10 +20,16 @@ printf("%-17s\t%s\n", "市", "人口");
 
 foreach ($census as $city => $population) {
   $total += $population;
-  //print "<tr><td>$city</td><td>$population</td></tr>\n";
   printf("%-17s\t%s\n", $city, $population);
 }
-
-//print "<tr><td>合計</td><td>$total</td></tr>\n"; print "</table>";
 printf("合計\t\t\t%s\n", $total);
-//print "</table>";
+
+/*
+// HTML
+foreach ($census as $city => $population) {
+  $total += $population;
+  print "<tr><td>$city</td><td>$population</td></tr>\n";
+}
+print "<tr><td>合計</td><td>$total</td></tr>\n";
+print "</table>";
+*/
