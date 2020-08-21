@@ -1,5 +1,48 @@
 <?php
 // 配列の操作　解答例
+// ********** Q1 **********
+// D. 配列の各要素の値には文字列を利用することができる
+
+// ********** Q2 **********
+// E. 50
+
+// ********** Q3 **********
+// D. ① =  ② =>
+
+// ********** Q4 **********
+// A. 数値以外のキーを指定する連想配列では、配列に要素を追加した場合の順序は保持されないため、foreach文で配列から要素を取り出す順番は不定である
+
+// ********** Q5 **********
+// B. red yellow orange blue
+
+// ********** Q6 **********
+// D. night : black
+//    sea   : blue
+//    leaf  : green
+//    sun   : red
+
+// ********** Q7 **********
+// B. $n = count($fruits);
+//    for ($i = 1; $i <= $n; $i++) {
+//        print "{$i} {$fruits[$i]}";
+//    }
+
+// ********** Q8 **********
+// B. implode()
+
+// ********** Q9 **********
+// D. print $profiles[1]['country'];
+
+// ********** Q10 **********
+// D. $arrays['apple']['color'] = 'red';
+//    $arrays['apple']['stock'] = 1000;
+//    $arrays['banana']['color'] = 'yellow';
+//    $arrays['banana']['stock'] = 2000;
+// E. $arrays = array(
+//                'apple' => array('color' => 'red', 'stock' => 1000),
+//                'banana' => array('color' => 'yellow', 'stock' => 2000)
+//                 );
+
 // ********** Q11 **********
 $teams = ["team-A", "team-B", "team-C", "team-D", "team-E"];
 for ($i = 0; $i < count($teams); $i++) {
@@ -32,7 +75,6 @@ $teams = ["team-A" => ["home" => "大阪", "number" => 20],
 foreach ($teams as $key => $value) {
   print($key . "の本拠地は" . $value["home"] . "で選手数は" . $value["number"] . "\n");
 }
-
 
 // ********** Q15 **********
 $drinks = ["Coffee" => 230, "Tea" => 200, "Cake" => 300, "Pie" => 350];
