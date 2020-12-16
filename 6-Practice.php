@@ -1,7 +1,22 @@
 <?php
 // オブジェクト指向　解答
-/*
 // ********** Q1 **********
+C
+// ********** Q2 **********
+B
+// ********** Q3 **********
+C
+// ********** Q4 **********
+C
+// ********** Q5 **********
+A
+// ********** Q6 **********
+D,E
+// ********** Q7 **********
+C
+// ********** Q8 **********
+B
+// ********** Q9 **********
 class Message {
   protected $message;
 
@@ -20,9 +35,8 @@ $obj = new Message("こんにちは！！\n");
 $obj->showMsg();
 $obj->setMsg("こんばんは\n");
 $obj->showMsg();
-*/
 
-// ********** Q2 **********
+// ********** Q10 **********
 class Message {
   protected $message;
   protected $recipient;
@@ -47,7 +61,7 @@ $obj->setRecipient("山田太郎");
 $obj->showMsg();
 
 
-// ********** Q3 **********
+// ********** Q11 **********
 class SNS extends Message {
   public $tool = "Twitter";
   public function showMsg()
