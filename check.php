@@ -2,18 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$fh = fopen("menu.txt", "rb");
-$menu = array();
-while ((!feof($fh)) && ($line = fgets($fh))) {
-  $line = trim($line);
-  $info = explode('|', $line);
-  $menu[$info[0]] = $info[1];
+$fh = fopen('books.csv','rb');
+if (! $fh) {
+  $e = error_get_last();
+  die("dishes.csvのオープン失敗: ". $e['message'] . "\n");
 }
-fclose($fh);
-
-$fh = fopen("menu-tax.txt", "wb");
-foreach ($menu as $key => $value) {
-  $menu[$key] += $value*0.1;
-  fwrite($fh, "$key|$menu[$key]\n");
+print "<table border=\"1\">\n";
+while ((! feof($fh)) && ($line = fgetcsv($fh))) {
+    print "<tr><td>" . implode("</td><td>", $line) . "</td></tr>\n";
 }
-fclose($fh);
+print "</table>";
