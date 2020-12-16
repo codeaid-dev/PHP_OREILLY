@@ -1,5 +1,4 @@
 <?php
-/*
 // ファイル操作　解答例
 // *********** Q1 **********
 C
@@ -35,12 +34,12 @@ $dsp = implode(",", $foods);
 print($dsp . "\n");
 
 // *********** Q10 **********
-// fgets()を使った例 fgetcsv()を使ってもよい
+// fgets()を使った例
 $fh = fopen("menu.txt", "rb");
 $menu = array();
 while ((!feof($fh)) && ($line = fgets($fh))) {
   $line = trim($line);
-  $info = explode(',', $line);
+  $info = explode('|', $line);
   $menu[$info[0]] = $info[1];
 }
 fclose($fh);
@@ -48,10 +47,9 @@ fclose($fh);
 $fh = fopen("menu-tax.txt", "wb");
 foreach ($menu as $key => $value) {
   $menu[$key] += $value*0.1;
-  fwrite($fh, "$key,$menu[$key]\n");
+  fwrite($fh, "$key|$menu[$key]\n");
 }
 fclose($fh);
-*/
 
 // ********** Q11 **********
 $page = file_get_contents('color-template.html');
