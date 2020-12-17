@@ -16,3 +16,8 @@ A,E
 // ********** Q8 **********
 A
 <?php
+// ********** Q9 **********
+foreach ($_GET as $key => $value) {
+  echo 'キー：'.$key.'<br>';
+  echo '値：'.$value.'<br><br>';
+}

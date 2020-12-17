@@ -75,3 +75,40 @@ $sns = new SNS("SNSからのメッセージです\n"); // ③
 $sns->tool = "LINE";
 $sns->setRecipient("田中二郎"); // ④
 $sns->showMsg();
+
+// ********** Q12 **********
+class Car {
+  private $name;
+  protected $power;
+
+  public function __construct($name, $power) {
+    if (!is_numeric($power)) {
+      throw new Exception('馬力は数字である必要があります'); // ①
+    }
+    $this->name = $name;
+    $this->power = $power;
+  }
+
+  public function getName() {
+    return $this->name;
+  }
+
+  public function getType() {
+    if ($this->power >= 160) {
+      return 'スポーツ';
+    } else {
+      return 'ノーマル';
+    }
+  }
+}
+
+$cars = array();
+try { // ②
+  $cars[] = new Car('Ferrari', 500);
+  $cars[] = new Car('Carolla', 105);
+} catch(Exception $e) { // ③
+  print '車が作れません：'.$e->getMessage();
+}
+foreach ($cars as $car) {
+  print '車名：'.$car->getName().'<br>タイプ：'.$car->getType().'<br><br>'; // ④
+}
