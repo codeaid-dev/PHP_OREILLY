@@ -63,15 +63,15 @@ $obj->showMsg();
 
 // ********** Q11 **********
 class SNS extends Message {
-  public $tool = "Twitter";
+  public $tool = "Twitter"; // ⑤
   public function showMsg()
   {
-    parent::showMsg();
-    print($this->tool . "を使用しています\n");
+    parent::showMsg(); // ①
+    print($this->tool . "を使用しています\n"); // ②
   }
 }
 
-$sns = new SNS("SNSからのメッセージです\n");
+$sns = new SNS("SNSからのメッセージです\n"); // ③
 $sns->tool = "LINE";
-$sns->setRecipient("田中二郎");
+$sns->setRecipient("田中二郎"); // ④
 $sns->showMsg();
