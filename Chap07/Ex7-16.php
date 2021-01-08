@@ -49,8 +49,8 @@ function validate_form() {
 
   if ($input['year'] && $input['month'] && $input['day'] &&
       checkdate($input['month'], $input['day'], $input['year'])) {
-    //$submitted_date = new DateTime(trtotime($input['year'] . '-' . $input['month'] . '-' . $input['day']));
-    $submitted_date = new DateTime($input['year'] . '-' . $input['month'] . '-' . $input['day']);
+    $submitted_date = new DateTime('@'.strtotime($input['year'] . '-' . $input['month'] . '-' . $input['day']));
+    //$submitted_date = new DateTime($input['year'] . '-' . $input['month'] . '-' . $input['day']);
     if (($range_start > $submitted_date) || ($range_end < $submitted_date)) {
       $errors[] = 'Please choose a date less than six months old.';
     }
