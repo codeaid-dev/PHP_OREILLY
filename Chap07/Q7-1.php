@@ -1,4 +1,15 @@
-<form method="POST" action="order.php">
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  print ("[noodle]: ".$_POST['noodle']."<br>");
+  if ($_POST['sweet'] != NULL) {
+    foreach ($_POST['sweet'] as $val) {
+      print "[sweet]: ".$val."<br>";
+    }
+  }
+  print ("[sweet_q]: ".$_POST['sweet_q']);
+}
+?>
+<form method="POST" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>">
   Braised Noodles with: <select name="noodle">
     <option>crab meat</option>
     <option>mushroom</option>
