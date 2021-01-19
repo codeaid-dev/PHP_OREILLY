@@ -68,8 +68,9 @@ $year = filter_input(INPUT_GET, "year", FILTER_VALIDATE_INT);
 <?php if (empty($year)): ?>
   <p>判定する年を入力してください</p>
   <form action="leap_year_check.php" method="get">
-    <lavel>判定年：</lavel>
+    <label>判定年：
     <input name="year" type="number" value="<? echo htmlentities(date("Y"), ENT_QUOTES, "UTF-8") ?>">
+    </label>
     <button type="submit">送信</button>
   </form>
 <?php else: ?>
