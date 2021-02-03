@@ -1,13 +1,15 @@
 <?php
+$make_things_cheaper = true;
 try {
   $db = new PDO('mysql:host=mysql;dbname=restaurant;charset=utf8',
                 'penguin',
                 'top^hat');
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $q = $db->exec("INSERT INTO dishes (dish_name, price, is_spicy)
-                  VALUES ('Eggplant with Chili Sauce', 3.50, 0)");
-  $q = $db->exec("INSERT INTO dishes (dish_name, price, is_spicy)
-                  VALUES ('Lobster with Chili Sauce', 10.50, 0)");
+  if ($make_things_cheaper) {
+    $q = $db->exec("DELETE FROM dishes WHERE price > 19.95");
+  } else {
+    $q = $db->exec("DELETE FROM dishes");
+  }
 } catch (PDOException $e) {
   print "Couldn't create table: " . $e->getMessage();
 }
