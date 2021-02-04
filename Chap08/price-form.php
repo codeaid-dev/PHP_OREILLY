@@ -18,22 +18,14 @@
         </ul></td>
       </tr>
     <?php } ?>
-
     <tr>
-      <td>Dish Name:</td>
-      <td><?= $form->input('text', ['name' => 'dish_name']) ?></td>
+      <td>Minimum Price:</td>
+      <td><?= $form->input('text',['name' => 'min_price']) ?></td>
     </tr>
     <tr>
-      <td>Price:</td>
-      <td><?= $form->input('text', ['name' => 'price']) ?></td>
+      <td colspan="2" align="center">
+        <?= $form->input('submit', ['name' => 'search', 'value' => 'Search']) ?></td>
     </tr>
-    <tr>
-      <td>Spicy:</td>
-      <td><?= $form->input('checkbox', ['name' => 'is_spicy', 'value' => 'yes']) ?></td>
-    </tr>
-    <tr><td colspan="2" align="center">
-      <?= $form->input('submit', ['name' => 'save', 'value' => 'Order']) ?>
-    </td></tr>
   </table>
   </form>
 </body>

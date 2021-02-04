@@ -43,6 +43,7 @@ function validate_form() {
   if ($input['min_price'] === null || $input['min_price'] === false) {
     $errors[] = 'Please enter a valid minimum price.';
   }
+  $input['max_price'] = filter_input(INPUT_POST, 'max_price', FILTER_VALIDATE_FLOAT);
   if ($input['max_price'] === null || $input['max_price'] === false) {
     $errors[] = 'Please enter a valid maximum price.';
   }
