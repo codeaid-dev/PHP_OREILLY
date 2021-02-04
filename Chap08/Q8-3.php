@@ -71,7 +71,7 @@ function process_form($input) {
   $stmt = $db->prepare($sql);
   $stmt->execute(array($input['dish_id']));
   $dish = $stmt->fetch();
-  if (count($dish) === 0) {
+  if (!isset($dish)) {
     print 'No dishes matched.';
   } else {
     print '<table>';

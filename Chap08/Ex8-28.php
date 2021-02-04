@@ -33,6 +33,11 @@ function validate_form() {
   $input = array();
   $errors = array();
 
+  $input['dish_id'] = filter_input(INPUT_POST, 'dish_id', FILTER_VALIDATE_INT);
+  if ($input['dish_id'] <= 0) {
+    $errors[] = 'Please enter a valid dish id.';
+  }
+
   $input['dish_name'] = trim($_POST['dish_name'] ?? '');
   if (!strlen($input['dish_name'])) {
     $errors[] = 'Please enter the name of the dish.';
@@ -58,8 +63,8 @@ function process_form($input) {
   }
 
   try {
-    $stmt = $db->prepare('INSERT INTO dishes (dish_name, price, is_spicy) VALUES (?,?,?)');
-    $stmt->execute(array($input['dish_name'], $input['price'], $is_spicy));
+    $stmt = $db->prepare('INSERT INTO dishes (dish_id, dish_name, price, is_spicy) VALUES (?,?,?,?)');
+    $stmt->execute(array($input['dish_id'], $input['dish_name'], $input['price'], $is_spicy));
 
     print 'Added ' . htmlentities($input['dish_name']) . ' to the database.';
   } catch (PDOException $e) {

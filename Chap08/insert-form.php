@@ -20,6 +20,10 @@
     <?php } ?>
 
     <tr>
+      <td>Dish ID:<br>(↑idを入力するフォームを追加)</td>
+      <td><?= $form->input('text', ['name' => 'dish_id']) ?></td>
+    </tr>
+    <tr>
       <td>Dish Name:</td>
       <td><?= $form->input('text', ['name' => 'dish_name']) ?></td>
     </tr>
